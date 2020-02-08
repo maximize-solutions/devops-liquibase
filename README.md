@@ -18,7 +18,7 @@ Get the list of changesets to apply considering a database and a changelog to ap
 
 ```
 docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
-  ferrarimarco/liquibase \
+  maximizesolutions/devops-liquibase \
   --driver=oracle.jdbc.OracleDriver \
   --changeLogFile=/liquibase/changelog/changelog-name.yaml \
   --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
@@ -30,7 +30,7 @@ docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/
 ### Generate a Liquibase diff report
 
 ```
-docker run --rm -it ferrarimarco/liquibase \
+docker run --rm -it maximizesolutions/devops-liquibase \
   --driver=oracle.jdbc.OracleDriver \
   --referenceUrl=jdbc:oracle:thin:@REF_DB_HOST:REF_DB_PORT/REF_DB_NAME \
   --referenceUsername=REF_DB_USER \
@@ -45,7 +45,7 @@ docker run --rm -it ferrarimarco/liquibase \
 
 ```
 docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
-  ferrarimarco/liquibase \
+  maximizesolutions/devops-liquibase \
   --driver=oracle.jdbc.OracleDriver \
   --changeLogFile=/liquibase/changelog/changelog-name.yaml \
   --referenceUrl=jdbc:oracle:thin:@REF_DB_HOST:REF_DB_PORT/REF_DB_NAME \
@@ -63,7 +63,7 @@ Note that if you change the `--changeLogFile` extension to .xml, Liquibase will 
 
 ```
 docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
-  ferrarimarco/liquibase \
+  maximizesolutions/devops-liquibase \
   --driver=oracle.jdbc.OracleDriver \
   --changeLogFile=/liquibase/changelog/changelog-name.yaml \
   --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
@@ -76,7 +76,7 @@ docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/
 
 ```
 docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
-  ferrarimarco/liquibase \
+  maximizesolutions/devops-liquibase \
   --driver=oracle.jdbc.OracleDriver \
   --changeLogFile=/liquibase/changelog/changelog-name.yaml \
   --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
